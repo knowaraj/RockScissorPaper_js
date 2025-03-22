@@ -31,3 +31,10 @@ img{
     object-fit: cover;
     border-radius: 50%;
 }
+.scores{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    gap: 20px;
+}
