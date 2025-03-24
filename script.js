@@ -22,7 +22,7 @@ choice.forEach(choice => {
 
 
 const game = (clicked,compChoice) =>{
-    console.log(clicked + compChoice)
+    console.log("Uers choice " + clicked +" CompChoice " + compChoice)
     if(clicked === compChoice){
         console.log("draw")
     }
@@ -37,8 +37,14 @@ const game = (clicked,compChoice) =>{
         else{
             userWin = compChoice === "rock" ? false: true;
         }
+
+
+        if(userWin === true){
+            console.log("User won")
+        }
+        else{
+            console.log("Comp Won")
+        }
     }
-    if(userWin === true){
-        console.log("User won")
-    }
+    
 }
