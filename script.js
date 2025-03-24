@@ -22,4 +22,7 @@ choice.forEach(choice => {
 
 const game = (clicked,compChoice) =>{
     console.log(clicked + compChoice)
+    if(clicked === compChoice){
+        console.log("draw")
+    }
 }
