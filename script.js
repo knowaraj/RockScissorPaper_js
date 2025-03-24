@@ -1,5 +1,6 @@
 let uScore = 0;
 let cScore = 0;
+let userWin = true
 
 const choice = document.querySelectorAll(".choice");
 const computerChoice = () =>{
@@ -24,5 +25,20 @@ const game = (clicked,compChoice) =>{
     console.log(clicked + compChoice)
     if(clicked === compChoice){
         console.log("draw")
+    }
+    else{
+        
+        if(clicked === "paper"){
+            userWin = compChoice === "scissor" ? false : true;
+        }
+        else if(clicked === "rock"){
+            userWin = compChoice === "paper" ? false : true;
+        }
+        else{
+            userWin = compChoice === "rock" ? false: true;
+        }
+    }
+    if(userWin === true){
+        console.log("User won")
     }
 }
