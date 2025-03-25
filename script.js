@@ -2,6 +2,9 @@ let uScore = 0;
 let cScore = 0;
 let userWin = true
 
+const userDispdiv = document.querySelector("user-score");
+const udisp = document.createElement("p");
+const cdisp = document.querySelector("cscore");
 const choice = document.querySelectorAll(".choice");
 const computerChoice = () =>{
     const choices = ["rock","paper","scissor"]
@@ -18,13 +21,17 @@ choice.forEach(choice => {
         game(clicked,compChoice);
     })
 });
+const draw = () => {
+    
+}
+const winner = (userWin) => {
 
-
+}
 
 const game = (clicked,compChoice) =>{
     console.log("Uers choice " + clicked +" CompChoice " + compChoice)
     if(clicked === compChoice){
-        console.log("draw")
+        draw();
     }
     else{
         
@@ -38,13 +45,6 @@ const game = (clicked,compChoice) =>{
             userWin = compChoice === "rock" ? false: true;
         }
 
-
-        if(userWin === true){
-            console.log("User won")
-        }
-        else{
-            console.log("Comp Won")
-        }
     }
     
 }
