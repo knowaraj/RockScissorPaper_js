@@ -2,10 +2,12 @@ let uScore = 0;
 let cScore = 0;
 let userWin = true
 
-const userDispdiv = document.querySelector("user-score");
-const udisp = document.createElement("p");
-const cdisp = document.querySelector("cscore");
+const userdisp = document.querySelector("#uscore");
+const compdisp = document.querySelector("#cscore");
 const choice = document.querySelectorAll(".choice");
+const msg = document.querySelector("#msg");
+
+
 const computerChoice = () =>{
     const choices = ["rock","paper","scissor"]
     const rand = Math.floor(Math.random()*3)
@@ -22,10 +24,19 @@ choice.forEach(choice => {
     })
 });
 const draw = () => {
-    
+    msg.innerText = "Game is Draw ! Play Again.";
 }
-const winner = (userWin) => {
-
+const winner = (userWin,compChoice) => {
+    if(userWin){
+        uScore++
+        userdisp.innerText = `${uScore}`
+        msg.innerText = `You Win ! Computer Choice was : ${compChoice} `
+    }
+    else{
+        cScore++
+        compdisp.innerText = `${cScore}`
+        msg.innerText = `You Lost ! Computer Choice was : ${compChoice} `
+    }
 }
 
 const game = (clicked,compChoice) =>{
@@ -44,7 +55,7 @@ const game = (clicked,compChoice) =>{
         else{
             userWin = compChoice === "rock" ? false: true;
         }
-
+        winner(userWin,compChoice);
     }
     
 }
