@@ -6,6 +6,7 @@ const userdisp = document.querySelector("#uscore");
 const compdisp = document.querySelector("#cscore");
 const choice = document.querySelectorAll(".choice");
 const msg = document.querySelector("#msg");
+const btn = document.querySelector(".buttonreset");
 
 
 const computerChoice = () =>{
@@ -59,3 +60,7 @@ const game = (clicked,compChoice) =>{
     }
     
 }
+btn.addEventListener("click" , () =>{
+    location.reload();
+
+})
