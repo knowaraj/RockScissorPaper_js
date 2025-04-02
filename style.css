@@ -39,5 +39,10 @@ img{
     gap: 20px;
 }
 .buttonreset{
-   
+    background-color: rgba(255, 0, 0, 0.453);
+    height: 30px;
+    width: 50px;
+    margin: 7px;
+    padding: 3px;
+    
 }
